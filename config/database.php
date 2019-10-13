@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mongodb_conn'),
 
     /*
     |--------------------------------------------------------------------------
@@ -90,6 +90,12 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
         ],
+
+        'mongodb_conn' => [
+            'driver' => 'mongodb',
+            'dsn'=> env('MONGODB_DNS', ''),
+            'database' => env('MONGODB_COLLECTION', ''),
+        ]
 
     ],
 
